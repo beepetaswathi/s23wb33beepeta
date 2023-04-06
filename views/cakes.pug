@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1= title
+    -
+     let cakes  = [{"cake_Name": "strawberrycake", "cake_flavour": "strawberry", "cost": "$25",},
+      { "cake_Name": "chocolatecake", "cake_flavour": "chocolate", "cost": "$20",}, 
+      {"cake_Name": "butterscotchcake", "cake_flavour": "butterscotch", "cost": "$30",},]
+    div(class= "container-fluid")
+        div(class = "row")  
+            each item, index in cakes
+                div(class= "col-sm-2") Name:  #{item.cake_Name}
+                div(class= "col-sm-2") flavour:  #{item.cake_flavour}
+                div(class= "col-sm-2") cost:   #{item.cost}
+
+
